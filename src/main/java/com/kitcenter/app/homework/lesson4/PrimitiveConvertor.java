@@ -1,4 +1,4 @@
-package com.kitcenter.app.utils.convertors;
+package com.kitcenter.app.homework.lesson4;
 
 import java.util.Scanner;
 
