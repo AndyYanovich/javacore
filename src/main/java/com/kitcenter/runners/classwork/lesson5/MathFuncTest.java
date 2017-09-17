@@ -4,8 +4,6 @@ import com.kitcenter.app.classwork.lesson5.MathFunc;
 import org.junit.Assert;
 import org.junit.Test;
 
-//import static org.junit.jupiter.api.Assertions.assertEquals;
-
 public class MathFuncTest {
     @Test // JUnit framework annotation
     public void multiplyTest() {
