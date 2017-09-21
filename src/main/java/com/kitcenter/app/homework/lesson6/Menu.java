@@ -6,7 +6,7 @@ public class Menu {
     public String getmenu() {
         InputData menu = new InputData();
 
-        String welcomeText = "You can run one of several program. Make your choice";
+        String welcomeText = "You can run one of several programs. Make your choice";
         String descriptionText = "1 - Run \"Right-angled triangle\" program\n";
         descriptionText = descriptionText.concat("2 - Run \"Define even or odd number\" program\n");
         descriptionText = descriptionText.concat("3 - Run \"What number is bigger\" program\n");
