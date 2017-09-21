@@ -2,12 +2,7 @@ package com.kitcenter.runners.homework.lesson5;
 
 import com.kitcenter.app.homework.lesson5.Calculator;
 import org.junit.Assert;
-import org.junit.FixMethodOrder;
 import org.junit.Test;
-import org.junit.runners.MethodSorters;
-
-@FixMethodOrder(MethodSorters.NAME_ASCENDING)
-//@FixMethodOrder(MethodSorters.DEFAULT)
 
 public class CalculatorTest {
 

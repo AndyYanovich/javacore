@@ -1,7 +1,7 @@
 package com.kitcenter.app.homework.lesson6;
 
 public class RightAngledTriangle {
-    public static String description = "--\nEnter size of triangle's sides. Program will determine right-angled triangle or no.";
+    public static String description = "Enter size of triangle's sides. Program will determine right-angled triangle or no.";
 
     InputData side = new InputData();
 
@@ -23,7 +23,7 @@ public class RightAngledTriangle {
         System.out.println(result);
     }
 
-    public String checkHypotenuse(int a, int b, int c) {
+    private String checkHypotenuse(int a, int b, int c) {
         String res = "It's not a right-angle triangle!!!";
         if (c >= a + b) {
             res = "It's not a triangle!!!";
