@@ -1,7 +1,7 @@
 package com.kitcenter.app.homework.lesson6;
 
 public class BiggerNumber {
-    public static String description = "Enter two numbers. Program will determine bigger of them.";
+    public static String description = "--\nEnter two numbers. Program will determine bigger of them.";
 
     InputData getnumber = new InputData();
 

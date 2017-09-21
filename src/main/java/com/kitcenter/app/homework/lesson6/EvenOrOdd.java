@@ -1,7 +1,7 @@
 package com.kitcenter.app.homework.lesson6;
 
 public class EvenOrOdd {
-    public static String description = "Enter any number. Program will determine even or odd number.";
+    public static String description = "--\nEnter any number. Program will determine even or odd number.";
 
     InputData getnumber = new InputData();
 
