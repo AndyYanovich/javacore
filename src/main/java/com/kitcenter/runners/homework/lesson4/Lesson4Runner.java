@@ -2,12 +2,45 @@ package com.kitcenter.runners.homework.lesson4;
 
 import com.kitcenter.app.homework.lesson4.PrimitiveConvertor;
 
-public class Lesson4Runner {
-    public static void main(String[] args) {
-        PrimitiveConvertor primitiveConvertor = new PrimitiveConvertor();
+import java.util.Scanner;
 
-        primitiveConvertor.floatToChar();
-        primitiveConvertor.intToChar();
-        primitiveConvertor.charToInt();
+public class Lesson4Runner {
+
+    Scanner scanner = new Scanner(System.in);
+    PrimitiveConvertor primitiveConvertor = new PrimitiveConvertor();
+
+    public static void main(String[] args) {
+
+        Lesson4Runner run = new Lesson4Runner();
+        run.floatToChar();
+        run.intToChar();
+        run.charToInt();
+    }
+
+    public void floatToChar() {
+        System.out.print("Enter 'float' value ");
+        float floatVar = scanner.nextFloat();
+        char charVar = primitiveConvertor.floatToChar(floatVar);
+        System.out.println("Input float value is " + floatVar + ". Output char value is " + charVar + "\n");
+    }
+
+    public void intToChar() {
+        System.out.print("Enter 'int' value ");
+        int intVar = scanner.nextInt();
+        char charVar = primitiveConvertor.floatToChar(intVar);
+        System.out.println("Input int value is " + intVar + ". Output char value is " + charVar + "\n");
+    }
+
+    public void charToInt() {
+        System.out.print("Enter 'char' value (single symbol) ");
+        String stringVar = scanner.next();
+        char[] charVars = stringVar.toCharArray();
+        if (charVars.length > 1) {
+            System.out.println("Looooooser!!! I said single symbol!");
+            System.out.println("charVar will be use symbol - " + charVars[0]);
+        }
+        char charVar = charVars[0];
+        int intVar = primitiveConvertor.charToInt(charVar);
+        System.out.println("Input char value is " + charVar + ". Output int value is " + intVar);
     }
 }
