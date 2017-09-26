@@ -130,11 +130,15 @@ public class DifferenArraysRunner {
         while (exitBool == false) {
             System.out.println("Input any number or type \"exit\"");
             String enteredData = scanner.next();
-            try {
-                number = Integer.parseInt(enteredData);
-                sum += number;
-            } catch (NumberFormatException e) {
+            if (enteredData.equals("exit")) {
                 exitBool = true;
+            } else {
+                try {
+                    number = Integer.parseInt(enteredData);
+                    sum += number;
+                } catch (NumberFormatException e) {
+                    System.out.println("It was incorrect value.");
+                }
             }
         }
         System.out.println("Sum is " + sum);
