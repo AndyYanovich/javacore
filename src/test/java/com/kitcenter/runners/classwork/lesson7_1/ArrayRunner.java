@@ -1,6 +1,6 @@
-package com.kitcenter.runners.classwork.lesson8;
+package com.kitcenter.runners.classwork.lesson7_1;
 
-import com.kitcenter.app.classwork.lesson8.Array;
+import com.kitcenter.app.classwork.lesson7_1.Array;
 
 import java.util.Arrays;
 

@@ -21,7 +21,6 @@ public class MathFuncTest {
 
     @Test(timeout = 1000)
     public void incorrectTest2() {
-//        while (true);
     }
 
     @Test(timeout = 1000) // JUnit framework annotation

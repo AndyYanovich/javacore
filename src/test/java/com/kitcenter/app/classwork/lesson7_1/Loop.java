@@ -1,4 +1,4 @@
-package com.kitcenter.app.classwork.lesson8;
+package com.kitcenter.app.classwork.lesson7_1;
 
 public class Loop {
 

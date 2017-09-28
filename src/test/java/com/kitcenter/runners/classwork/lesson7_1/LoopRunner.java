@@ -1,6 +1,6 @@
-package com.kitcenter.runners.classwork.lesson8;
+package com.kitcenter.runners.classwork.lesson7_1;
 
-import com.kitcenter.app.classwork.lesson8.Loop;
+import com.kitcenter.app.classwork.lesson7_1.Loop;
 
 import java.util.Scanner;
 
