@@ -1,5 +1,6 @@
 package com.kitcenter.runners.homework.lesson8;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class DifferenArraysRunner {
@@ -28,6 +29,9 @@ public class DifferenArraysRunner {
 
         runner.showSubtaskLine("g");
         runner.countSum();
+
+        runner.showSubtaskLine("g - II version");
+        runner.countSumWithArray();
     }
 
     public void makeArrayEven2To20() {
@@ -126,22 +130,57 @@ public class DifferenArraysRunner {
     public void countSum() {
         int number, sum = 0;
         boolean exitBool = false;
+        String enteredData = "";
 
-        while (exitBool == false) {
+        while (!enteredData.equals("exit")) {
             System.out.println("Input any number or type \"exit\"");
-            String enteredData = scanner.next();
-            if (enteredData.equals("exit")) {
-                exitBool = true;
-            } else {
-                try {
-                    number = Integer.parseInt(enteredData);
-                    sum += number;
-                } catch (NumberFormatException e) {
+            enteredData = scanner.next();
+
+            try {
+                number = Integer.parseInt(enteredData);
+                sum += number;
+            } catch (NumberFormatException e) {
+                if (!enteredData.equals("exit")) {
                     System.out.println("It was incorrect value.");
                 }
             }
         }
         System.out.println("Sum is " + sum);
+    }
+
+    public void countSumWithArray() {
+        int number, sum = 0;
+        String enteredData = "";
+        int[] array = new int[0];
+
+        while (!enteredData.equals("exit")) {
+            System.out.println("Input any number or type \"exit\"");
+            enteredData = scanner.next();
+
+            try {
+                number = Integer.parseInt(enteredData);
+                array = makeBiggerArray(array);
+                array[array.length - 1] = number;
+            } catch (NumberFormatException e) {
+                if (!enteredData.equals("exit")) {
+                    System.out.println("It was incorrect value.");
+                }
+            }
+        }
+
+        for (int element : array) {
+            sum += element;
+        }
+
+        System.out.println("Sum is " + sum);
+    }
+
+    private int[] makeBiggerArray(int[] array) {
+        int[] newArray = new int[array.length + 1];
+        for (int i = 0; i < array.length; i++) {
+            newArray[i] = array[i];
+        }
+        return newArray;
     }
 
     public void showSubtaskLine(String text) {
