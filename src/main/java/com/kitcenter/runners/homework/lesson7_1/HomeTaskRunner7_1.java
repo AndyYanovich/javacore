@@ -1,13 +1,12 @@
-package com.kitcenter.runners.homework.lesson8;
+package com.kitcenter.runners.homework.lesson7_1;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
-public class DifferenArraysRunner {
+public class HomeTaskRunner7_1 {
     Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-        DifferenArraysRunner runner = new DifferenArraysRunner();
+        HomeTaskRunner7_1 runner = new HomeTaskRunner7_1();
 
         runner.showSubtaskLine("a");
         runner.makeArrayEven2To20();

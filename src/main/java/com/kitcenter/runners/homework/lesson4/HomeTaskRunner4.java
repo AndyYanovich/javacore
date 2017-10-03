@@ -4,14 +4,14 @@ import com.kitcenter.app.homework.lesson4.PrimitiveConvertor;
 
 import java.util.Scanner;
 
-public class Lesson4Runner {
+public class HomeTaskRunner4 {
 
     Scanner scanner = new Scanner(System.in);
     PrimitiveConvertor primitiveConvertor = new PrimitiveConvertor();
 
     public static void main(String[] args) {
 
-        Lesson4Runner run = new Lesson4Runner();
+        HomeTaskRunner4 run = new HomeTaskRunner4();
         run.floatToChar();
         run.intToChar();
         run.charToInt();
