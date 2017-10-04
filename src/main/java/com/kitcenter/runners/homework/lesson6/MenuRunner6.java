@@ -6,17 +6,17 @@ import com.kitcenter.app.homework.lesson6.RightAngledTriangle;
 
 import java.util.Scanner;
 
-public class HomeTaskRunner6 {
+public class MenuRunner6 {
     public String welcomeText = "You can run one of several programs. Make your choice\n1 - Run \"Right-angled triangle\" program\n2 - Run \"What number is bigger\" program\n3 - Run \"Define even or odd number\" program\n0 - \"Exit\" from program";
     Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-        HomeTaskRunner6 runner = new HomeTaskRunner6();
+        MenuRunner6 runner = new MenuRunner6();
         runner.mainMenu();
     }
 
     public void mainMenu() {
-        HomeTaskRunner6 runner = new HomeTaskRunner6();
+        MenuRunner6 runner = new MenuRunner6();
         RightAngledTriangle triangle = new RightAngledTriangle();
         BiggerNumber biggerNumber = new BiggerNumber();
         EvenOrOdd evenOrOdd = new EvenOrOdd();

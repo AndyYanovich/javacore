@@ -2,11 +2,11 @@ package com.kitcenter.runners.homework.lesson7_1;
 
 import java.util.Scanner;
 
-public class HomeTaskRunner7_1 {
+public class ArraysRunner7_1 {
     Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-        HomeTaskRunner7_1 runner = new HomeTaskRunner7_1();
+        ArraysRunner7_1 runner = new ArraysRunner7_1();
 
         runner.showSubtaskLine("a");
         runner.makeArrayEven2To20();
