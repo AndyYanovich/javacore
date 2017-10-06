@@ -7,9 +7,10 @@ public class PalindromeRunner9 {
 
     public static void main(String[] args) {
         Runner runner = new Runner();
-        runner.description = "The program determine palindromes.";
+        runner.description = "Lesson 9.\n";
+        runner.description += "The program determine palindromes.";
         runner.description += " You should choose one of 3 methods\n";
-        runner.description += "Input 1, 2, 3 for run program or 0 for exit";
+        runner.description += "Input 1, 2, 3 for run subprogram or 0 for exit";
 
         mainMenu(runner);
     }

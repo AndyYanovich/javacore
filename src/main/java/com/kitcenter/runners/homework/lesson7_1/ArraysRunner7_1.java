@@ -1,36 +1,100 @@
 package com.kitcenter.runners.homework.lesson7_1;
 
+import com.kitcenter.runners.homework.general.Runner;
+
 import java.util.Scanner;
 
 public class ArraysRunner7_1 {
     Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-        ArraysRunner7_1 runner = new ArraysRunner7_1();
+        Runner runner = new Runner();
 
-        runner.showSubtaskLine("a");
-        runner.makeArrayEven2To20();
+        runner.description = "Choose and enter menu item:\n" +
+                "a - subtask a\n" +
+                "b - subtask b\n" +
+                "c - subtask c\n" +
+                "d - subtask d\n" +
+                "e - subtask e\n" +
+                "f - subtask f\n" +
+                "g - subtask g\n" +
+                "i - subtask i\n" +
+                "0 or exit - \"exit\"";
 
-        runner.showSubtaskLine("b");
-        runner.makeArraySort();
+        mainMenu(runner);
+    }
 
-        runner.showSubtaskLine("c");
-        runner.makeArrayRandEven();
+    private static void mainMenu(Runner runner) {
+        ArraysRunner7_1 arrayMethod = new ArraysRunner7_1();
 
-        runner.showSubtaskLine("d");
-        runner.makeArrayRandMinMax();
+        String menuItem = runner.showMenuGetText();
+        switch (menuItem) {
+            case "a":
+                runner.subDescription = "Output in a row and in a column an array of all even numbers from 2 to 20.";
+                runner.showSubmenu();
+                arrayMethod.makeArrayEven2To20();
+                mainMenu(runner);
+                break;
 
-        runner.showSubtaskLine("e");
-        runner.makeMultidimensionalArray10Till99();
+            case "b":
+                runner.subDescription = "Output in a row odd numbers from 1 to 99. Output reverse array in the next row.";
+                runner.showSubmenu();
+                arrayMethod.makeArraySort();
+                mainMenu(runner);
+                break;
 
-        runner.showSubtaskLine("f");
-        runner.makeBeautifulArray();
+            case "c":
+                runner.subDescription = "Output array from 15 random numbers (0-9). Output in the next row how many even elements hss array.";
+                runner.showSubmenu();
+                arrayMethod.makeArrayRandEven();
+                mainMenu(runner);
+                break;
 
-        runner.showSubtaskLine("g");
-        runner.countSum();
+            case "d":
+                runner.subDescription = "Output array of 15 random numbers (0-999). Output min and max values of array's elements.";
+                runner.showSubmenu();
+                arrayMethod.makeArrayRandMinMax();
+                mainMenu(runner);
+                break;
 
-        runner.showSubtaskLine("g - II version");
-        runner.countSumWithArray();
+            case "e":
+                runner.subDescription = "Output two-dimensional array (10-99). It should consist from 8 rows and 5 columns.";
+                runner.showSubmenu();
+                arrayMethod.makeMultidimensionalArray10Till99();
+                mainMenu(runner);
+                break;
+
+            case "f":
+                runner.subDescription = "Output two-dimensional array (1-999). It should consist from 8 rows, 5 columns and align to the right side.";
+                runner.showSubmenu();
+                arrayMethod.makeBeautifulArray();
+                mainMenu(runner);
+                break;
+
+            case "g":
+                runner.subDescription = "Output the sum of entered numbers by the user.";
+                runner.showSubmenu();
+                arrayMethod.countSum();
+                mainMenu(runner);
+                break;
+
+            case "i":
+                runner.subDescription = "Output the sum of entered numbers by the user. Output each entered number.";
+                runner.showSubmenu();
+                arrayMethod.countSumWithArray();
+                mainMenu(runner);
+                break;
+
+            case "0":
+                break;
+
+            case "exit":
+                break;
+
+            default:
+                mainMenu(runner);
+                break;
+        }
     }
 
     public void makeArrayEven2To20() {
@@ -132,7 +196,7 @@ public class ArraysRunner7_1 {
         String enteredData = "";
 
         while (!enteredData.equals("exit")) {
-            System.out.println("Input any number or type \"exit\"");
+            System.out.println("Enter any number or type \"exit\"");
             enteredData = scanner.next();
 
             try {
@@ -153,7 +217,7 @@ public class ArraysRunner7_1 {
         int[] array = new int[0];
 
         while (!enteredData.equals("exit")) {
-            System.out.println("Input any number or type \"exit\"");
+            System.out.println("Enter any number or type \"exit\"");
             enteredData = scanner.next();
 
             try {
@@ -169,9 +233,10 @@ public class ArraysRunner7_1 {
 
         for (int element : array) {
             sum += element;
+            System.out.print(element + " ");
         }
 
-        System.out.println("Sum is " + sum);
+        System.out.println("\nSum is " + sum);
     }
 
     private int[] makeBiggerArray(int[] array) {
