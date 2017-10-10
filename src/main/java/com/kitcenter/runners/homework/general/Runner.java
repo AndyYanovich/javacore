@@ -32,7 +32,7 @@ public class Runner {
     }
 
     public String getStringValue() {
-        return scanner.next();
+        return scanner.nextLine();
     }
 
     public int getIntValue() {
