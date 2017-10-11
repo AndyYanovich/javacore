@@ -71,6 +71,9 @@ public class Runner {
         return floatValue;
     }
 
-
+    public void waitEnterToBack() {
+        showMessage("--\nPress \"Enter\" to continue");
+        getStringValue();
+    }
 
 }
