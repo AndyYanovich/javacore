@@ -5,7 +5,7 @@ import java.util.ArrayList;
 
 public class FileHandler {
 
-    public ArrayList readFile(String relativePathFile) {
+    public ArrayList<String> readFile(String relativePathFile) {
         String pathFile = makeFilePath(relativePathFile);
 
         BufferedReader myFile = null;

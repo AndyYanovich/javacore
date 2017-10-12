@@ -1,10 +1,7 @@
 package com.kitcenter.app.homework.lesson10;
 
 import com.kitcenter.app.homework.lesson9.Palindrome;
-import com.kitcenter.runners.homework.lesson10.FileRunner;
-
 import java.util.ArrayList;
-
 import static java.util.Arrays.sort;
 
 public class WorkWithFile {
@@ -52,6 +49,37 @@ public class WorkWithFile {
         fileHandler.writeFile(pathFileWrite, newFileRows);
     }
 
+    public void makePropertyFile(ArrayList<String> fileRows, String pathFile, String deleteWord) {
+        ArrayList<String[]> newFileRows = new ArrayList();
+        ArrayList<String> editFileRows = new ArrayList();
 
+        if (fileRows.size() > 0) {
+            newFileRows.add(fileRows.get(0).split("="));
+
+            for (int i = 0; i < fileRows.size(); i++) {
+                String[] keyValue = fileRows.get(i).split("=");
+
+                for (int k = 0; k < newFileRows.size(); k++) {
+                    if (newFileRows.get(k)[0].equals(keyValue[0])) {
+                        if (keyValue[1].equals(deleteWord)) {
+                            newFileRows.remove(k);
+                            break;
+                        } else {
+                            newFileRows.set(k, keyValue);
+                            break;
+                        }
+                    } else {
+                        if (k == newFileRows.size() - 1) {
+                            newFileRows.add(keyValue);
+                        }
+                    }
+                }
+            }
+        }
+        for (String[] el : newFileRows) {
+            editFileRows.add(el[0] + "=" + el[1]);
+        }
+        fileHandler.writeFile(pathFile, editFileRows);
+    }
 }
 

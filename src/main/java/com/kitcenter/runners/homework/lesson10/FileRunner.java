@@ -5,7 +5,6 @@ import com.kitcenter.app.homework.lesson10.WorkWithFile;
 import com.kitcenter.runners.homework.general.Runner;
 
 import java.util.ArrayList;
-import java.util.Scanner;
 
 public class FileRunner {
 
@@ -28,8 +27,7 @@ public class FileRunner {
         WorkWithFile workWithFile = new WorkWithFile();
         FileHandler fileHandler = new FileHandler();
         String pathFileToRead, pathFileToWrite;
-        ArrayList newFileRows = new ArrayList();
-        StringBuffer newRowBuffer = new StringBuffer();
+        ArrayList<String> newFileRows = new ArrayList<String>();
         String newRow = "";
 
         String menuItem = runner.showMenuGetText();
@@ -81,6 +79,47 @@ public class FileRunner {
                 mainMenu(runner);
                 break;
 
+            case "4":
+                runner.subDescription = "will be" +
+                        " later";
+                runner.showSubmenu();
+
+                String setProperty = "Set property (format: \"key,value\"), " +
+                        "delete property (format: \"key,delete\") " +
+                        "or press \"Enter\" for save file";
+
+                pathFileToWrite = "src\\main\\resources\\lesson10\\properties";
+                ArrayList<String> propertyFileRows = new ArrayList<String>();
+                newRow = "notEmpty";
+
+                runner.showMessage("property file:");
+
+                propertyFileRows = fileHandler.readFile(pathFileToWrite);
+                for (String el : propertyFileRows) {
+                    runner.showMessage(el);
+                }
+
+                runner.showMessage(setProperty);
+                while (!newRow.equals("")) {
+                    newRow = runner.getStringValue();
+                    if (!newRow.equals("")) {
+                        if (newRow.matches("^(?!,)\\w+,\\w+$(?!,)")) {
+                            propertyFileRows.add(newRow.replace(",", "="));
+                        } else {
+                            runner.showMessage(runner.incorrectChoice);
+                            runner.showMessage(setProperty);
+                        }
+                    }
+                }
+
+                workWithFile.makePropertyFile(propertyFileRows, pathFileToWrite, "delete");
+
+                runner.showMessage("Output file is in: " + fileHandler.makeFilePath(pathFileToWrite));
+
+                runner.waitEnterToBack();
+                mainMenu(runner);
+                break;
+
             case "0":
                 break;
 
@@ -88,15 +127,5 @@ public class FileRunner {
                 runner.showMessage(runner.incorrectChoice);
                 mainMenu(runner);
         }
-
     }
-
-    public String getProperty() {
-        return runner.getStringValue();
-    }
-
-    public void showMsg(String text) {
-        runner.showMessage(text);
-    }
-
 }
