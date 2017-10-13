@@ -9,6 +9,16 @@ public class Student extends Person {
         this.university = university;
     }
 
+    @Override
+    public String say() {
+        return "Hi";
+    }
+
+    @Override
+    public void isDrink() {
+
+    }
+
     public String getResponse(String question) {
         return response;
     }
@@ -23,5 +33,10 @@ public class Student extends Person {
 
     public void setResponse(String response) {
         this.response = response;
+    }
+
+    @Override
+    public String toString() {
+        return "Student{" + "name='" + name + '\'' + '}';
     }
 }

@@ -10,6 +10,17 @@ public class Teacher extends Person {
 
     @Override
     public String say() {
-        return "Hello maaaan!";
+        return "Aloha";
     }
+
+    @Override
+    public void isDrink() {
+
+    }
+
+    @Override
+    public String getResponse(String question) {
+        return "Eh, What is a question";
+    }
+
 }
