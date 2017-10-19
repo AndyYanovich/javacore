@@ -14,8 +14,8 @@ public class Teacher extends Person {
     }
 
     @Override
-    public void isDrink() {
-
+    public void lessonFinished() {
+        System.out.println("Go home!");
     }
 
     @Override
@@ -23,4 +23,8 @@ public class Teacher extends Person {
         return "Eh, What is a question";
     }
 
+    @Override
+    public boolean equals(Object obj) {
+        return super.equals(obj);
+    }
 }

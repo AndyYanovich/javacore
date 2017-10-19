@@ -23,5 +23,5 @@ public abstract class Person {
         return "My answer is " + question;
     }
 
-    public abstract void isDrink();
+    public abstract void lessonFinished();
 }
