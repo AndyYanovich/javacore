@@ -15,7 +15,7 @@ public class Student extends Person {
     }
 
     @Override
-    public void isDrink() {
+    public void lessonFinished() {
 
     }
 
