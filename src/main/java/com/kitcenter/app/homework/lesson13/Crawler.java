@@ -1,4 +1,4 @@
-package com.kitcenter.app.homework.lesson14;
+package com.kitcenter.app.homework.lesson13;
 
 public class Crawler extends Tractor {
     private int weight, passengers;

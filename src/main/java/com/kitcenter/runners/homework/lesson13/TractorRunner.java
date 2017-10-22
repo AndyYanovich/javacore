@@ -1,8 +1,8 @@
-package com.kitcenter.runners.homework.lesson14;
+package com.kitcenter.runners.homework.lesson13;
 
-import com.kitcenter.app.homework.lesson14.Crawler;
-import com.kitcenter.app.homework.lesson14.Tractor;
-import com.kitcenter.app.homework.lesson14.Wheeled;
+import com.kitcenter.app.homework.lesson13.Crawler;
+import com.kitcenter.app.homework.lesson13.Tractor;
+import com.kitcenter.app.homework.lesson13.Wheeled;
 
 public class TractorRunner {
     public static void main(String[] args) {

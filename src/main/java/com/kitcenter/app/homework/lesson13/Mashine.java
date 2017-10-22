@@ -1,4 +1,4 @@
-package com.kitcenter.app.homework.lesson14;
+package com.kitcenter.app.homework.lesson13;
 
 public abstract class Mashine implements Run {
     public static final int MAX_SPEED = 320;
