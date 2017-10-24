@@ -31,6 +31,10 @@ public class Runner {
         System.out.println(text);
     }
 
+    public void showMessageInLine(String text) {
+        System.out.print(text);
+    }
+
     public String getStringValue() {
         return scanner.nextLine();
     }
