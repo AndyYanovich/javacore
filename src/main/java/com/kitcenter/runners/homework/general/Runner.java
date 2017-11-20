@@ -80,4 +80,16 @@ public class Runner {
         getStringValue();
     }
 
+    public int getIntValue(int fromNumber, int tillNumber) {
+        int value = getIntValue();
+
+        if (value < fromNumber || value > tillNumber) {
+            showMessage(incorrectChoice);
+            value = getIntValue(fromNumber, tillNumber);
+        }
+        return value;
+    }
+
+
 }
+

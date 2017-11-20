@@ -40,7 +40,6 @@ public enum FamousPerson {
         return name;
     }
 
-
     public int getAge() {
         return age;
     }
